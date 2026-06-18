@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import ingestRouter from './routes/ingest.js';
 
 dotenv.config();
 
@@ -14,6 +15,8 @@ app.get('/health', (_req, res) => {
   res.json({ status: 'ok', service: 'neuron-backend' });
 });
 
+app.use('/ingest', ingestRouter);
+
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em na porta:${PORT}`);
+  console.log(`Servidor rodando na porta:${PORT}`);
 });

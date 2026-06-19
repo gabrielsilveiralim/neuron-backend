@@ -1,8 +1,11 @@
 {
-  "name": "neuron",
+  "name": "neuron-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Backend do Neuron - chatbot pessoal com RAG",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
